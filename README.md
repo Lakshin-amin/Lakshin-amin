@@ -1,5 +1,5 @@
 # lakshplayz23.github.io
-<!DOCTYPE html>
+# <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -111,7 +111,7 @@
       </svg>
     </div>
 
-    <section>
+ <section>
       <ul class="socials">
         <li><a class="fa-brands fa-github" href="https://github.com/lakshplayz23" target="_blank"></a></li>
         <li><a class="fa-brands fa-linkedin" href="https://www.linkedin.com/in/lakshin-amin-b41168370/" target="_blank"></a></li>
@@ -127,6 +127,8 @@
       <p class="legal">© 2025 All rights reserved</p>
     </section>
   </footer>
+</body>
+</html>
 </body>
 </html>
 
