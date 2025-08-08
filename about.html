@@ -1,60 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me - Lakshin's Portfolio</title>
-  <link rel="stylesheet" href="test.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Lakshin Amin</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link your CSS here -->
+    <style>
+        /* Optional: Scroll animation styling */
+        .scroll-text {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .scroll-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="left">
-      <span>Lakshin Amin - Student</span>
-    </div>
-    <div class="center">
-      <a href="./index.html">Home</a>
-      <a href="./about.html" class="active">About Me</a>
-      <a href="./contact.html">Contact Me</a>
-    </div>
-  </div>
+    <main>
+        <section>
+            <h1 class="scroll-text">About Me</h1>
+            <p class="scroll-text">Hi, I’m Lakshin Amin, a passionate web developer and designer. I enjoy creating interactive, visually appealing websites and applications.</p>
+            <p class="scroll-text">I’m currently pursuing B.Sc. CS and planning to do MCA to further enhance my technical skills.</p>
+            <p class="scroll-text">This portfolio is a showcase of my skills, projects, and creative experiments with web development.</p>
 
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="about-container">
-      <h1>About Me</h1>
-      <p>
-        Hello! I'm <strong>Lakshin Amin</strong>, a Computer Science student at the University of Mumbai. 
-        I’m passionate about coding, web development, and exploring new technologies.  
-        I love building creative projects, improving my skills, and learning something new every day.
-      </p>
-      <p>
-        My goal is to work on impactful software projects and contribute to the tech community.  
-        Outside of coding, I enjoy gaming, photography, and keeping up with the latest in technology.
-      </p>
-    </div>
-  </section>
+            <button id="resume-button">Download Resume</button>
+        </section>
+    </main>
 
-  <!-- Footer -->
-  <footer>
-    <section>
-      <ul class="socials">
-        <li><a class="fa-brands fa-github" href="https://github.com/lakshplayz23" target="_blank"></a></li>
-        <li><a class="fa-brands fa-linkedin" href="https://www.linkedin.com/in/lakshin-amin-b41168370/" target="_blank"></a></li>
-        <li><a class="fa-brands fa-instagram" href="https://www.instagram.com/_itzme.laksh_07/" target="_blank"></a></li>
-      </ul>
-      <ul class="links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-      <p class="legal">© 2025 All rights reserved</p>
-    </section>
-  </footer>
+    <footer>
+        <p class="scroll-text">© 2025 Lakshin Amin. All rights reserved.</p>
+    </footer>
 
+    <!-- JavaScript -->
+    <script>
+        // Reveal text on scroll
+        function revealText() {
+            const paragraphs = document.querySelectorAll('.scroll-text');
+            const batchSize = 1;
+            let counter = 0;
+
+            paragraphs.forEach((paragraph, index) => {
+                if (isElementInViewport(paragraph)) {
+                    if (counter < batchSize || index === paragraphs.length - 1) {
+                        paragraph.classList.add('visible');
+                        counter++;
+                    } else {
+                        counter = 0;
+                    }
+                }
+            });
+        }
+
+        // Check if element is in viewport
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Scroll event
+        window.addEventListener('scroll', revealText);
+
+        // Resume download
+        document.getElementById('resume-button').addEventListener('click', function () {
+            window.open('./media/Nirrav Sawla Resume.docx', '_blank');
+        });
+
+        // Trigger on load
+        revealText();
+    </script>
 </body>
 </html>
