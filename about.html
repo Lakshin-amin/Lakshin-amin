@@ -44,12 +44,12 @@
         <p class="scroll-text">© 2025 Lakshin Amin. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Single JavaScript block -->
     <script>
-        // Reveal text on scroll
+        // Function to add 'visible' class to paragraphs in batches
         function revealText() {
             const paragraphs = document.querySelectorAll('.scroll-text');
-            const batchSize = 1;
+            const batchSize = 1; // Number of lines to reveal at once
             let counter = 0;
 
             paragraphs.forEach((paragraph, index) => {
@@ -64,7 +64,7 @@
             });
         }
 
-        // Check if element is in viewport
+        // Function to check if an element is in the viewport
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
@@ -75,15 +75,15 @@
             );
         }
 
-        // Scroll event
+        // Event listener to trigger revealText function on scroll
         window.addEventListener('scroll', revealText);
 
-        // Resume download
+        // Resume button click (Google Docs link)
         document.getElementById('resume-button').addEventListener('click', function () {
-            window.open('./media/Nirrav Sawla Resume.docx', '_blank');
+            window.open('https://docs.google.com/document/d/1Qut8EqaUjdxykcE9N6qn4BqA_EYL02AWoeD59wtJubc/edit?usp=sharing', '_blank');
         });
 
-        // Trigger on load
+        // Run on page load
         revealText();
     </script>
 </body>
