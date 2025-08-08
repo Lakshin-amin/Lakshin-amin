@@ -4,7 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Lakshin Amin</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link your CSS here -->
+    <link rel="stylesheet" href="style.css"> <script>
+        // Function to add 'visible' class to paragraphs in batches
+        function revealText() {
+            const paragraphs = document.querySelectorAll('.scroll-text');
+            const batchSize = 1; // Set the number of lines to reveal at once
+            let counter = 0;
+
+            paragraphs.forEach((paragraph, index) => {
+                if (isElementInViewport(paragraph)) {
+                    if (counter < batchSize || index === paragraphs.length - 1) {
+                        paragraph.classList.add('visible');
+                        counter++;
+                    } else {
+                        counter = 0;
+                    }
+                }
+            });
+        }
+
+        // Function to check if an element is in the viewport
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Event listener to trigger revealText function on scroll
+        window.addEventListener('scroll', revealText);
+
+        // Event listener to handle resume download button click
+        document.getElementById('resume-button').addEventListener('click', function () {
+            window.open('./media/Nirrav Sawla Resume.docx', '_blank');
+        });
+
+        // Initially trigger revealText function on page load
+        revealText();
+    </script><!-- Link your CSS here -->
     <style>
         /* Optional: Scroll animation styling */
         .scroll-text {
