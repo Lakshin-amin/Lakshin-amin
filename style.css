@@ -197,7 +197,7 @@ body{background:var(--bg);color:#e6eef8;overflow-x:hidden}
   color: white;
   box-shadow: 0 4px 20px rgba(83, 208, 255, 0.4);
   transition: transform 0.3s ease;
-  overflow: hidden; /* Add this */
+  overflow: hidden; 
 }
 
 .logo img {
