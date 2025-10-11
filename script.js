@@ -1,6 +1,3 @@
-// particles + site interactions for the dark neon portfolio
-
-// ---- particles.js (tsParticles) ----
 window.addEventListener('load', () => {
   if (window.tsParticles) {
     tsParticles.load('tsparticles', {
@@ -23,7 +20,7 @@ window.addEventListener('load', () => {
     });
   }
 
-  // --- Typewriter effect for name ---
+ 
   const nameEl = document.getElementById('type-name');
   const full = 'Lakshin Amin';
   let idx = 0;
@@ -37,7 +34,7 @@ window.addEventListener('load', () => {
   }
   type();
 
-  // --- Tab navigation & smooth show ---
+  
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('.section');
   function activateSection(id){
@@ -52,18 +49,18 @@ window.addEventListener('load', () => {
     link.addEventListener('click', e=>{ e.preventDefault(); activateSection(link.dataset.target); });
   });
 
-  // On load, check hash
+  
   const initial = location.hash.replace('#','') || 'home';
   activateSection(initial);
 
-  // CTA buttons
+  
   document.querySelectorAll('[data-target]').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       const t = btn.getAttribute('data-target'); if(t) activateSection(t);
     });
   });
 
-  // --- Projects modal behavior ---
+  
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modalImg');
   const modalTitle = document.getElementById('modalTitle');
@@ -94,7 +91,7 @@ window.addEventListener('load', () => {
   modalClose.addEventListener('click', ()=>{ modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); });
   modal.addEventListener('click', e=>{ if(e.target === modal) { modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); } });
 
-  // --- Contact form demo submit ---
+  
   const form = document.getElementById('contactForm');
   form.addEventListener('submit', e=>{
     e.preventDefault();
