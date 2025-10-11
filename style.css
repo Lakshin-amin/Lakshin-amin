@@ -2,8 +2,8 @@
   --bg:hsl(236, 55%, 6%);
   --card:#0b1220;
   --muted:#9aa8bf;
-  --neon1:#53d0ff; /* cyan */
-  --neon2:#9b6bff; /* purple */
+  --neon1:#53d0ff; 
+  --neon2:#9b6bff; 
 }
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
@@ -23,7 +23,7 @@ body{background:var(--bg);color:#e6eef8;overflow-x:hidden}
 .icon{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.02);transition:all .18s}
 .icon:hover{box-shadow:0 6px 26px rgba(83,208,255,0.06);color:var(--neon1)}
 
-/* Sections */
+
 .section{margin-top:28px;padding:28px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 30px rgba(2,6,23,0.6);display:none}
 .section.active, .section.visible{display:block;animation:fadeUp .5s ease}
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
@@ -49,13 +49,13 @@ body{background:var(--bg);color:#e6eef8;overflow-x:hidden}
 .screen{height:180px;border-radius:8px;background:linear-gradient(180deg,#041123,#021026);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted)}
 .screen-header{height:6px;width:60%;background:rgba(255,255,255,0.02);border-radius:3px;margin-bottom:10px}
 
-/* About */
+
 .glass{padding:18px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03)}
 .about-row{display:flex;gap:18px;margin-top:12px}
 .bullets{list-style:none;padding-left:0;color:var(--muted)}
 .resume-area{display:flex;align-items:center;justify-content:center}
 
-/* Projects grid */
+
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:12px}
 .proj-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);cursor:pointer;transition:transform .25s,box-shadow .25s}
 .proj-card:hover{transform:translateY(-8px);box-shadow:0 14px 40px rgba(83,208,255,0.06)}
@@ -66,11 +66,11 @@ body{background:var(--bg);color:#e6eef8;overflow-x:hidden}
 .proj-body h3{margin:0 0 6px 0}
 .proj-body p{color:var(--muted);margin:0}
 
-/* Contact form */
+
 .contact-form{display:flex;flex-direction:column;gap:15px;max-width:540px}
 .contact-form input,.contact-form textarea{background:transparent;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);color:#dfefff}
 
-/* Footer */
+
 .footer {
   display: flex;
   justify-content: flex-start; 
