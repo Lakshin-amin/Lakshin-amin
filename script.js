@@ -107,7 +107,7 @@ window.addEventListener('load', () => {
     send.textContent = 'Sending...';
     send.disabled = true;
     setTimeout(() => {
-      alert('Thanks! Message sent (demo).');
+      alert('Thanks! Message sent Successfully.');
       send.textContent = 'Send Message';
       send.disabled = false;
       form.reset();
