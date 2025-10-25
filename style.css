@@ -62,7 +62,7 @@ body{background:var(--bg);color:#e6eef8;overflow-x:hidden}
 .proj-thumb{height:140px;background-size:cover;background-position:center;border-radius:8px;margin-bottom:12px}
 .proj-card:nth-child(1) .proj-thumb{background-image:url('Taskgasm (2).png')}
 .proj-card:nth-child(2) .proj-thumb{background-image:url('ChillMeter.png')}
-.proj-card:nth-child(3) .proj-thumb{background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=60')}
+.proj-card:nth-child(3) .proj-thumb{background-image:url('MovieScoutr.png')}
 .proj-body h3{margin:0 0 6px 0}
 .proj-body p{color:var(--muted);margin:0}
 
