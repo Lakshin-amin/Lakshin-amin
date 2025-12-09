@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
     });
   }
 
-  // --- Typewriter effect for name ---
+  // Typewriter effect for name 
   const nameEl = document.getElementById('type-name');
   const full = 'Lakshin Amin';
   let idx = 0;
@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
   }
   type();
 
-  // --- Tab navigation & smooth show ---
+  // Tab navigation & smooth show 
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('.section');
   function activateSection(id) {
@@ -59,7 +59,7 @@ window.addEventListener('load', () => {
     });
   });
 
-  // --- Projects modal behavior ---
+  // Projects modal behavior 
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modalImg');
   const modalTitle = document.getElementById('modalTitle');
@@ -78,7 +78,7 @@ window.addEventListener('load', () => {
       modalDesc.textContent = desc;
       modalTech.textContent = 'Tech: ' + tech;
 
-      // ✅ dynamically set your real project links
+      //   real project links
       modalLive.href = live || '#';
       modalCode.href = code || '#';
 
@@ -99,7 +99,7 @@ window.addEventListener('load', () => {
     }
   });
 
-  // --- Contact form demo submit ---
+  //  Contact form  
   const form = document.getElementById('contactForm');
   form.addEventListener('submit', e => {
     e.preventDefault();
