@@ -22,7 +22,7 @@ Design: UI/UX principles, responsive layouts, animations
 - **✅ Taskgasm**  
   A minimal and modern task manager with local storage support.  
   🔗 Live: https://lakshin-amin.github.io/Taskgasm/  
-  💻 Code: https://github.com/lakshplayz23/Taskgasm  
+  💻 Code: https://github.com/Lakshin-amin/Taskgasm
 
 - **❄️ ChillMeter**  
   A temperature & weather-based UI project focused on clean visuals and UX.  
