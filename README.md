@@ -10,7 +10,7 @@ This repository showcases my projects, skills, and experiments in web developmen
 I’m a Computer Science student and aspiring full-stack developer with a strong interest in building performant, accessible, and visually engaging web applications.
 I enjoy turning ideas into real products using modern frontend and backend technologies.
 
-🛠️ Tech Stack :
+🛠️ Tech Stack :  
 Frontend: HTML, CSS, JavaScript, React  
 Backend: Node.js, Express (basics)  
 Database: MongoDB (basics)  
