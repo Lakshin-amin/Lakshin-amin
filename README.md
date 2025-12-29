@@ -36,9 +36,10 @@ Design: UI/UX principles, responsive layouts, animations
   🔗 Live: https://lakshin-amin.github.io/MovieScoutr/  
   💻 Code: https://github.com/Lakshin-amin/MovieScoutr  
 
-📬 Contact
+## 📬 Contact
 If you’d like to collaborate, give feedback, or discuss opportunities:
-GitHub: https://github.com/lakshplayz23
-LinkedIn: https://www.linkedin.com/in/lakshin-amin-b41168370/
-Email: Available via portfolio contact form
+- GitHub: https://github.com/lakshplayz23  
+- LinkedIn: https://www.linkedin.com/in/lakshin-amin-b41168370/  
+- Email: Available via portfolio contact form
+
 
