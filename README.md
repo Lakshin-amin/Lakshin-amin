@@ -3,7 +3,7 @@ Hey there, I am Lakshin Amin
 Welcome to my portfolio.
 This repository showcases my projects, skills, and experiments in web development, focusing on clean UI, performance, and modern design.
 
-🚀 Live Portfolio:
+🚀 Live Portfolio
  Visit: https://lakshin-amin.github.io/Lakshin-amin/
 
 🧠 About Me
