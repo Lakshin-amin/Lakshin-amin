@@ -36,7 +36,7 @@ Design: UI/UX principles, responsive layouts, animations
 
 ## 📬 Contact
 If you’d like to collaborate, give feedback, or discuss opportunities:
-- GitHub: https://github.com/lakshplayz23  
+- GitHub: https://github.com/Lakshin-amin  
 - LinkedIn: https://www.linkedin.com/in/lakshin-amin-b41168370/  
 - Email: Available via portfolio contact form
 
