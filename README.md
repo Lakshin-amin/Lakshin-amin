@@ -3,8 +3,8 @@ Hey there, I am Lakshin Amin
 Welcome to my portfolio.
 This repository showcases my projects, skills, and experiments in web development, focusing on clean UI, performance, and modern design.
 
-🚀 Live Portfolio
- ## Visit: https://lakshin-amin.github.io/Lakshin-amin/
+🚀 Live Portfolio  
+ Visit: https://lakshin-amin.github.io/Lakshin-amin/
 
 🧠 About Me
 I’m a Computer Science student and aspiring full-stack developer with a strong interest in building performant, accessible, and visually engaging web applications.
