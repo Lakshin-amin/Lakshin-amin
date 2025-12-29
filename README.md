@@ -11,11 +11,11 @@ I’m a Computer Science student and aspiring full-stack developer with a strong
 I enjoy turning ideas into real products using modern frontend and backend technologies.
 
 🛠️ Tech Stack :
-Frontend: HTML, CSS, JavaScript, React
-Backend: Node.js, Express (basics)
-Database: MongoDB (basics)
-Tools: Git, GitHub, VS Code
-Design: UI/UX principles, responsive layouts, animations
+Frontend: HTML, CSS, JavaScript, React  
+Backend: Node.js, Express (basics)  
+Database: MongoDB (basics)  
+Tools: Git, GitHub, VS Code  
+Design: UI/UX principles, responsive layouts, animations  
 
 ## 🚀 Featured Projects
 
