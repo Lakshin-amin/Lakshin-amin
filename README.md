@@ -17,8 +17,6 @@ Database: MongoDB (basics)
 Tools: Git, GitHub, VS Code
 Design: UI/UX principles, responsive layouts, animations
 
-📂 Featured Projects
-
 ## 🚀 Featured Projects
 
 - **✅ Taskgasm**  
