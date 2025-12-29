@@ -25,7 +25,7 @@ A minimal and modern task manager with local storage support.
 💻 Code: https://github.com/lakshplayz23/Taskgasm
 
 ❄️ ChillMeter
-A temperature & weather-based UI project focused on clean visuals and UX.                                                                                          
+A temperature & weather-based UI project focused on clean visuals and UX.
 🔗 Live: https://lakshin-amin.github.io/ChillMeter/
 💻 Code: https://github.com/Lakshin-amin/ChillMeter 
 
