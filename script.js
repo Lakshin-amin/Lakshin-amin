@@ -1,3 +1,4 @@
+
 window.addEventListener('load', () => {
   if (window.tsParticles) {
     tsParticles.load('tsparticles', {
@@ -20,97 +21,92 @@ window.addEventListener('load', () => {
     });
   }
 
-  // Typewriter effect for name 
+  // --- Typewriter effect for name ---
   const nameEl = document.getElementById('type-name');
   const full = 'Lakshin Amin';
   let idx = 0;
-  function type() {
-    if (idx <= full.length) {
+  function type(){
+    if(idx <= full.length){
       nameEl.textContent = full.slice(0, idx);
-      idx++;
-      setTimeout(type, 90);
+      idx++; setTimeout(type, 90);
     } else {
-      setTimeout(() => { idx = 0; type(); }, 3000);
+      setTimeout(()=>{ idx = 0; type(); }, 3000);
     }
   }
   type();
 
-  // Tab navigation & smooth show 
+  // --- Tab navigation & smooth show ---
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('.section');
-  function activateSection(id) {
-    sections.forEach(s => { s.classList.remove('visible', 'active'); });
+  function activateSection(id){
+    sections.forEach(s=>{ s.classList.remove('visible'); s.classList.remove('active'); });
     document.getElementById(id).classList.add('visible');
-    navLinks.forEach(n => { n.classList.toggle('active', n.dataset.target === id); });
+    // update nav
+    navLinks.forEach(n=>{ n.classList.toggle('active', n.dataset.target === id); });
     window.location.hash = id;
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({top:0,behavior:'instant'});
   }
-  navLinks.forEach(link => {
-    link.addEventListener('click', e => { e.preventDefault(); activateSection(link.dataset.target); });
+  navLinks.forEach(link=>{
+    link.addEventListener('click', e=>{ e.preventDefault(); activateSection(link.dataset.target); });
   });
 
-  const initial = location.hash.replace('#', '') || 'home';
+  // On load, check hash
+  const initial = location.hash.replace('#','') || 'home';
   activateSection(initial);
 
-  document.querySelectorAll('[data-target]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const t = btn.getAttribute('data-target');
-      if (t) activateSection(t);
+  // CTA buttons
+  document.querySelectorAll('[data-target]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const t = btn.getAttribute('data-target'); if(t) activateSection(t);
     });
   });
 
-  // Projects modal behavior 
-  const modal = document.getElementById('modal');
-  const modalImg = document.getElementById('modalImg');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalDesc = document.getElementById('modalDesc');
-  const modalTech = document.getElementById('modalTech');
-  const modalLive = document.getElementById('modalLive');
-  const modalCode = document.getElementById('modalCode');
-  const modalClose = document.getElementById('modalClose');
+  // --- Projects modal behavior ---
+  // --- Projects modal behavior ---
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImg');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const modalTech = document.getElementById('modalTech');
+const modalLive = document.getElementById('modalLive');
+const modalCode = document.getElementById('modalCode');
+const modalClose = document.getElementById('modalClose');
 
-  document.querySelectorAll('.proj-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const { title, img, desc, tech, live, code } = card.dataset;
+document.querySelectorAll('.proj-card').forEach(card => {
+  card.addEventListener('click', () => {
+    modalImg.src = card.dataset.img;
+    modalTitle.textContent = card.dataset.title;
+    modalDesc.textContent = card.dataset.desc;
+    modalTech.textContent = 'Tech: ' + card.dataset.tech;
 
-      modalImg.src = img;
-      modalTitle.textContent = title;
-      modalDesc.textContent = desc;
-      modalTech.textContent = 'Tech: ' + tech;
+    // ✅ FIX: real links
+    modalLive.href = card.dataset.live || '#';
+    modalCode.href = card.dataset.code || '#';
 
-      //   real project links
-      modalLive.href = live || '#';
-      modalCode.href = code || '#';
-
-      modal.classList.add('open');
-      modal.setAttribute('aria-hidden', 'false');
-    });
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
   });
+});
 
-  modalClose.addEventListener('click', () => {
+modalClose.addEventListener('click', () => {
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+});
+
+modal.addEventListener('click', e => {
+  if (e.target === modal) {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
-  });
+  }
+});
 
-  modal.addEventListener('click', e => {
-    if (e.target === modal) {
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden', 'true');
-    }
-  });
-
-  //  Contact form  
+  // --- Contact form demo submit ---
   const form = document.getElementById('contactForm');
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', e=>{
     e.preventDefault();
     const send = form.querySelector('button');
-    send.textContent = 'Sending...';
-    send.disabled = true;
-    setTimeout(() => {
-      alert('Thanks! Message sent Successfully.');
-      send.textContent = 'Send Message';
-      send.disabled = false;
-      form.reset();
-    }, 900);
+    send.textContent = 'Sending...'; send.disabled = true;
+    setTimeout(()=>{ alert('Thank you! Your message is sent.'); send.textContent = 'Send Message'; send.disabled=false; form.reset(); }, 900);
   });
+
 });
