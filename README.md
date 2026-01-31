@@ -25,12 +25,12 @@ Design: UI/UX principles, responsive layouts, animations
   💻 Code: https://github.com/Lakshin-amin/Taskgasm
 
 - **❄️ ChillMeter**  
-  A temperature & weather-based UI project focused on clean visuals and UX.  
+  Real-time weather updates, because guessing is not a reliable API.
   🔗 Live: https://lakshin-amin.github.io/ChillMeter/  
   💻 Code: https://github.com/Lakshin-amin/ChillMeter  
 
 - **🎬 MovieScoutr**  
-  A movie discovery app powered by the OMDb API with watchlist support.  
+  A movie discovery app that knows your next binge before you do.   
   🔗 Live: https://lakshin-amin.github.io/MovieScoutr/  
   💻 Code: https://github.com/Lakshin-amin/MovieScoutr  
 
