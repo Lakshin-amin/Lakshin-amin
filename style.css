@@ -224,7 +224,7 @@ body{
 .proj-card:hover{transform:translateY(-8px);box-shadow:0 14px 40px rgba(83,208,255,0.06)}
 .proj-thumb{height:140px;background-size:cover;background-position:center;border-radius:8px;margin-bottom:12px}
 .proj-card:nth-child(1) .proj-thumb{background-image:url('Women-safety.png')}
-.proj-card:nth-child(2) .proj-thumb{background-image:url('ChillMeter.png')}
+.proj-card:nth-child(2) .proj-thumb{background-image:url('aurafit.png')}
 .proj-card:nth-child(3) .proj-thumb{background-image:url('MovieScoutr.png')}
 .proj-body h3{margin:0 0 6px 0}
 .proj-body p
