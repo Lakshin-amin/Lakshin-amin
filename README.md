@@ -22,7 +22,7 @@ Design: UI/UX principles, responsive layouts, animations
 - **♀️ RakshaNet**  
   A minimal and modern task manager with local storage support.  
   🔗 Live: https://safety-app-delta.vercel.app/    
-  💻 Code: https://github.com/Lakshin-amin/Safety-app  
+  💻 Code: https://github.com/Lakshin-amin/RakshaNet    
 
 - **❄️ ChillMeter**  
   Real-time weather updates, because guessing is not a reliable API.  
