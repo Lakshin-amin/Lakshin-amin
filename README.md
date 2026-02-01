@@ -25,7 +25,7 @@ Design: UI/UX principles, responsive layouts, animations
   💻 Code: https://github.com/Lakshin-amin/RakshaNet    
 
 - **💪 Aurafit**  
-  Real-time weather updates, because guessing is not a reliable API.  
+  AuraFit is a smart fitness platform for structured training and progress tracking.  
   🔗 Live: https://lakshin-amin.github.io/Aurafit/    
   💻 Code: https://github.com/Lakshin-amin/Aurafit  
 
