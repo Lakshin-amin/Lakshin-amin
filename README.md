@@ -19,10 +19,10 @@ Design: UI/UX principles, responsive layouts, animations
 
 ## 🚀 Featured Projects
 
-- **✅ Taskgasm**  
+- **♀️ RakshaNet**  
   A minimal and modern task manager with local storage support.  
-  🔗 Live: https://lakshin-amin.github.io/Taskgasm/  
-  💻 Code: https://github.com/Lakshin-amin/Taskgasm
+  🔗 Live: https://safety-app-delta.vercel.app/    
+  💻 Code: https://github.com/Lakshin-amin/Safety-app  
 
 - **❄️ ChillMeter**  
   Real-time weather updates, because guessing is not a reliable API.  
