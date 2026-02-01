@@ -223,7 +223,7 @@ body{
 .proj-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);cursor:pointer;transition:transform .25s,box-shadow .25s}
 .proj-card:hover{transform:translateY(-8px);box-shadow:0 14px 40px rgba(83,208,255,0.06)}
 .proj-thumb{height:140px;background-size:cover;background-position:center;border-radius:8px;margin-bottom:12px}
-.proj-card:nth-child(1) .proj-thumb{background-image:url('Taskgasm (2).png')}
+.proj-card:nth-child(1) .proj-thumb{background-image:url('Women-safety.png')}
 .proj-card:nth-child(2) .proj-thumb{background-image:url('ChillMeter.png')}
 .proj-card:nth-child(3) .proj-thumb{background-image:url('MovieScoutr.png')}
 .proj-body h3{margin:0 0 6px 0}
