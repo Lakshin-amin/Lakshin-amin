@@ -25,7 +25,7 @@ Design: UI/UX principles, responsive layouts, animations
   💻 Code: https://github.com/Lakshin-amin/Taskgasm
 
 - **❄️ ChillMeter**  
-  Real-time weather updates, because guessing is not a reliable API.
+  Real-time weather updates, because guessing is not a reliable API.  
   🔗 Live: https://lakshin-amin.github.io/ChillMeter/  
   💻 Code: https://github.com/Lakshin-amin/ChillMeter  
 
