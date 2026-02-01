@@ -24,10 +24,10 @@ Design: UI/UX principles, responsive layouts, animations
   🔗 Live: https://safety-app-delta.vercel.app/    
   💻 Code: https://github.com/Lakshin-amin/RakshaNet    
 
-- **❄️ ChillMeter**  
+- **💪 Aurafit**  
   Real-time weather updates, because guessing is not a reliable API.  
-  🔗 Live: https://lakshin-amin.github.io/ChillMeter/  
-  💻 Code: https://github.com/Lakshin-amin/ChillMeter  
+  🔗 Live: https://lakshin-amin.github.io/Aurafit/    
+  💻 Code: https://github.com/Lakshin-amin/Aurafit  
 
 - **🎬 MovieScoutr**  
   A movie discovery app that knows your next binge before you do.   
