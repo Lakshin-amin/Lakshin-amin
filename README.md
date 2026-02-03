@@ -12,9 +12,9 @@ I enjoy turning ideas into real products using modern frontend and backend techn
 
 🛠️ Tech Stack :  
 Frontend: HTML, CSS, JavaScript, React  
-Backend: Node.js, Express    
-Database: MongoDB  
-Tools: Git, GitHub, VS Code  
+Backend: Javascript (Node.js, Express.js), Python (flask, Django)  
+Database: MongoDB, MySQL(SQL)  
+Tools: Git, GitHub, Vercel, VS Code  
 Design: UI/UX principles, responsive layouts, animations  
 
 ## 🚀 Featured Projects
