@@ -21,7 +21,7 @@ Design: UI/UX principles, responsive layouts, animations
 
 - **♀️ RakshaNet**  
   A real-time women safety web platform enabling instant SOS alerts and live location tracking.  
-  🔗 Live: https://safety-app-delta.vercel.app/    
+  🔗 Live: https://raksha-net-five.vercel.app/  
   💻 Code: https://github.com/Lakshin-amin/RakshaNet    
 
 - **💪 Aurafit**  
