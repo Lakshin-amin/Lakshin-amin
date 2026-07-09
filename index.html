@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAKSHIN.EXE — Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Locomotive Scroll CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+
+  <!-- Portfolio Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  <div class="scan-line"></div>
+
+  <!-- FIX: data-scroll-container MUST wrap everything including nav for Locomotive to work -->
+  <div data-scroll-container>
+
+    <!-- NAV — fixed, sits outside the scroll flow visually but inside container -->
+    <nav>
+      <div class="nav-logo">LAKSHIN<span>.EXE</span></div>
+      <div class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-status">
+        <div class="status-dot"></div>
+        ONLINE
+      </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section id="hero" data-scroll-section>
+      <canvas id="three-canvas"></canvas>
+      <div class="hero-glow"></div>
+      <div class="hex-grid"></div>
+
+      <div class="hero-grid">
+        <div class="hero-left">
+
+          <!-- ── PROFILE PHOTO ──── -->
+          <div class="profile-wrap">
+            <div class="profile-img-clip">
+              <img src="your-photo.jpg" alt="Lakshin Amin"
+                   onerror="this.parentElement.style.background='#0a1018';this.style.display='none'">
+            </div>
+            <!-- scanline sweep lives outside the clip so it can overflow slightly -->
+            <div class="profile-scan"></div>
+            <!-- corner brackets -->
+            <div class="profile-corner tl"></div>
+            <div class="profile-corner tr"></div>
+            <div class="profile-corner bl"></div>
+            <div class="profile-corner br"></div>
+            <!-- online status dot -->
+            <div class="profile-status"></div>
+          </div>
+
+          <!-- ── HERO TEXT ── -->
+          <div>
+            <div class="hero-tag">[ SYSTEM OPERATOR — AVAILABLE FOR HIRE ]</div>
+            <h1 class="hero-name glitch" data-text="Lakshin Amin">Lakshin <span class="accent">Amin</span></h1>
+            <div class="hero-role">MERN-Stack Developer</div>
+            <p class="hero-desc">
+              Student developer from Mumbai building real things with the MERN stack.
+              I obsess over clean UI, fast systems, and making the web feel alive —
+              from 3D orbital simulations to full-stack apps. Currently open to
+              internships and freelance work.
+            </p>
+            <div class="hero-btns">
+              <a href="#projects" class="btn-primary">◈ View Projects</a>
+              <a href="#contact"  class="btn-secondary">⌗ Open Channel</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="terminal-card">
+          <div class="term-bar">
+            <div class="term-dot" style="background:#ff5f56"></div>
+            <div class="term-dot" style="background:#ffbd2e"></div>
+            <div class="term-dot" style="background:#27c93f"></div>
+            <div class="term-title">lakshin@ghost.exe:~</div>
+          </div>
+          <div class="term-body">
+            <div><span class="t-prompt">lakshin@ghost.exe:~$</span> <span class="t-cmd">whoami --verbose</span></div>
+            <div class="t-out">──────────────────────────</div>
+            <div><span class="t-out">name:</span>&nbsp;&nbsp;&nbsp;&nbsp;  <span class="t-val">Lakshin Amin</span></div>
+            <div><span class="t-out">role:</span>&nbsp;&nbsp;&nbsp;&nbsp;  <span class="t-str">"MERN Stack Developer"</span></div>
+            <!-- FIX: "Juniour" typo fixed to "Junior" -->
+            <div><span class="t-out">level:</span>&nbsp;&nbsp;&nbsp; <span class="t-val">Student Developer</span> <span class="t-out">(2 yrs)</span></div>
+            <div><span class="t-out">location:</span> <span class="t-val">Mumbai, India</span></div>
+            <div><span class="t-out">status:</span>&nbsp;&nbsp; <span style="color:var(--neon)">OPEN TO WORK</span></div>
+            <div class="t-out">──────────────────────────</div>
+            <div class="typed-line">
+              <span class="t-prompt">lakshin@ghost.exe:~$</span>
+              <span id="typed-output"></span>
+              <span class="cursor-blink"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STATS STRIP ── -->
+    <div id="stats" data-scroll-section>
+      <div class="stats-inner">
+        <div class="stat-block">
+          <div class="stat-num" data-value="12" data-suffix="+">12<span>+</span></div>
+          <div class="stat-label">Projects shipped</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num" data-value="2" data-suffix="yr">2<span>yr</span></div>
+          <div class="stat-label">In production</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num" data-value="15" data-suffix="+">15<span>+</span></div>
+          <div class="stat-label">TECHNOLOGIES</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num" data-value="300" data-suffix="+">300<span>+</span></div>
+          <div class="stat-label">DSA PROBLEMS SOLVED</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SKILLS ── -->
+    <section id="skills" data-scroll-section>
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-eyebrow">02 // capabilities</div>
+          <h2 class="section-title">Technical <span class="dim">Arsenal</span></h2>
+        </div>
+        <div class="skills-grid">
+
+          <div class="skill-block">
+            <div class="skill-icon">⚡</div>
+            <div class="skill-name">Mern-stack Warfare</div>
+            <p class="skill-desc">Building modern full-stack web applications using the MERN ecosystem.</p>
+            <div class="skill-bar-wrap"><div class="skill-bar" style="width:94%"></div></div>
+            <div class="skill-tags">
+              <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MongoDB</span><span class="tag">REST APIs</span><span class="tag">JWT</span>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <div class="skill-icon">💻</div>
+            <div class="skill-name">Programming Fundamentals</div>
+            <p class="skill-desc">Object-oriented programming, problem solving, and software development principles.</p>
+            <div class="skill-bar-wrap"><div class="skill-bar" style="width:88%;background:var(--red);"></div></div>
+            <div class="skill-tags">
+              <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C++</span><span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">Object-Oriented Programming</span>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <div class="skill-icon">🌐</div>
+            <div class="skill-name">Experience Engineering</div>
+            <p class="skill-desc">Responsive, user-focused applications with modern frontend technologies.</p>
+            <div class="skill-bar-wrap"><div class="skill-bar" style="width:91%;background:var(--neon2);"></div></div>
+            <div class="skill-tags">
+              <span class="tag">Three.js</span><span class="tag">GSAP</span><span class="tag">Locomotive Scroll</span><span class="tag">Typed.js</span><span class="tag">Motion Design</span>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <div class="skill-icon">🤖</div>
+            <div class="skill-name">Computer Vision & Automation</div>
+            <p class="skill-desc">Creating vision-driven applications through gesture recognition and interactive computing.</p>
+            <div class="skill-bar-wrap"><div class="skill-bar" style="width:85%;background:var(--amber);"></div></div>
+            <div class="skill-tags">
+              <span class="tag">OpenCV</span><span class="tag">Python Automation</span><span class="tag">Machine Vision</span><span class="tag">Human-Computer Interaction</span>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <div class="skill-icon">📡</div>
+            <div class="skill-name">Interactive Visual Systems</div>
+            <p class="skill-desc">Building interactive simulations and visual systems for complex data and real-time experiences.</p>
+            <div class="skill-bar-wrap"><div class="skill-bar" style="width:80%;background:var(--purple);"></div></div>
+            <div class="skill-tags">
+              <span class="tag">3D Visualization</span><span class="tag">Physics Simulations</span><span class="tag">Scientific Computing</span><span class="tag">Real-Time Systems</span><span class="tag">User Experience</span>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <div class="skill-icon">☁️</div>
+            <div class="skill-name">Deployment & Tooling</div>
+            <p class="skill-desc">Version control, deployment workflows, development tooling, API testing, and modern hosting platforms.</p>
+            <div class="skill-bar-wrap"><div class="skill-bar" style="width:76%;background:#ff6622;"></div></div>
+            <div class="skill-tags">
+              <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Vercel</span><span class="tag">Render</span><span class="tag">Postman</span><span class="tag">Firebase</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects" data-scroll-section>
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-eyebrow">03 // projects</div>
+          <h2 class="section-title">Selected <span class="dim">Operations</span></h2>
+        </div>
+        <div class="projects-grid">
+
+          <div class="project-card featured">
+            <div class="project-header">
+              <span class="project-num">// 001</span>
+              <div class="project-badges">
+                <span class="badge badge-live">LIVE</span>
+                <span class="badge badge-os">OPEN SOURCE</span>
+              </div>
+            </div>
+            <div class="project-preview">
+              <canvas id="preview-canvas" style="width:100%;height:100%;"></canvas>
+              <div class="preview-label">Isro visualizer — LIVE PREVIEW</div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">Isro visualizer</div>
+              <p class="project-desc">An interactive 3D visualization platform simulating ISRO missions, orbital trajectories, and celestial mechanics using modern web technologies.</p>
+              <div class="project-stack">
+                <span class="stack-tag">React</span><span class="stack-tag">Vite </span>
+                <span class="stack-tag">Three.js</span><span class="stack-tag">React Three Fiber</span><span class="stack-tag">Drei</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="https://isro-visualizer.vercel.app/" class="project-link">◈ Live Demo</a>
+                <a href="https://github.com/Lakshin-amin/Isro-visualizer" class="project-link">⌗ GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-num">// 002</span>
+              <div class="project-badges"><span class="badge badge-live">LIVE</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-icon">🛡</div>
+              <div class="project-title">RakshaNet</div>
+              <p class="project-desc">High-performance encrypted proxy mesh with automatic failover, traffic obfuscation, and real-time analytics dashboard. Handles 10M+ req/day.</p>
+              <div class="project-stack">
+                <span class="stack-tag">Rust</span><span class="stack-tag">WireGuard</span><span class="stack-tag">eBPF</span><span class="stack-tag">Redis</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="https://raksha-net-five.vercel.app/" class="project-link">◈ Live Demo</a>
+                <a href="https://github.com/Lakshin-amin/RakshaNet" class="project-link">⌗ GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-num">// 003</span>
+              <div class="project-badges"><span class="badge badge-wip">LIVE</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-icon">🧠</div>
+              <div class="project-title">VOID INFERENCE</div>
+              <p class="project-desc">Self-hosted LLM inference engine with CUDA optimizations. Achieves 3x throughput vs vLLM on Llama-class models using custom attention kernels.</p>
+              <div class="project-stack">
+                <span class="stack-tag">CUDA</span><span class="stack-tag">C++</span><span class="stack-tag">PyTorch</span><span class="stack-tag">Triton</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="#" class="project-link">◈ Live Demo</a>
+                <a href="#" class="project-link">⌗ GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-num">// 004</span>
+              <div class="project-badges"><span class="badge badge-os">OPEN SOURCE</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-icon">🎬</div>
+              <div class="project-title">Lumen</div>
+              <p class="project-desc">Real-time network telemetry visualization. Ingests Netflow v9/IPFIX, renders live traffic topology maps, anomaly detection via isolation forest.</p>
+              <div class="project-stack">
+                <span class="stack-tag">Go</span><span class="stack-tag">D3.js</span><span class="stack-tag">ClickHouse</span><span class="stack-tag">WebSockets</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="https://lumen-psi-nine.vercel.app/" class="project-link">◈ Live Demo</a>
+                <a href="https://github.com/Lakshin-amin/Lumen" class="project-link">⌗ GitHub</a>
+              </div>
+              <span class="project-stars">891 ⭐</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-num">// 005</span>
+              <div class="project-badges"><span class="badge badge-live">LIVE</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-icon">🛡</div>
+              <div class="project-title">PHANTOM PROXY</div>
+              <p class="project-desc">High-performance encrypted proxy mesh with automatic failover, traffic obfuscation, and real-time analytics dashboard. Handles 10M+ req/day.</p>
+              <div class="project-stack">
+                <span class="stack-tag">Rust</span><span class="stack-tag">WireGuard</span><span class="stack-tag">eBPF</span><span class="stack-tag">Redis</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="#" class="project-link">◈ Live Demo</a>
+                <a href="#" class="project-link">⌗ GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ── -->
+    <section id="experience" style="background:var(--panel);" data-scroll-section>
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-eyebrow">04 // RECORDS</div>
+          <h2 class="section-title">Certification <span class="dim">Log</span></h2>
+        </div>
+        <div class="exp-list">
+
+          <div class="exp-item">
+            <div class="exp-date">2025 → Present</div>
+            <div class="exp-content">
+              <div class="exp-role">Bsc — Computer Science</div>
+              <div class="exp-company">// CURRENTLY PURSUING — MUMBAI</div>
+              <p class="exp-desc">Studying core CS fundamentals including data structures, algorithms, databases, and operating systems. Actively building projects alongside coursework to apply concepts in real-world applications.</p>
+              <div class="exp-chips">
+                <span class="exp-chip">DSA</span>
+                <span class="exp-chip">DBMS</span>
+                <span class="exp-chip">OS</span>
+                <span class="exp-chip">Computer Networks</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="exp-item">
+            <div class="exp-date">May 2026</div>
+            <div class="exp-content">
+              <div class="exp-role">Frontend Developer (React)</div>
+              <div class="exp-company">// HACKERRANK — ROLE CERTIFICATION</div>
+              <p class="exp-desc">Passed the HackerRank role certification test for Frontend Developer (React). Certified in building component-based UIs, managing state, and working with React's ecosystem.</p>
+              <div class="exp-chips">
+                <span class="exp-chip">React</span>
+                <span class="exp-chip">Component Design</span>
+                <span class="exp-chip">State Management</span>
+                <span class="exp-chip">ID: 5E083A5006AC</span>
+              </div>
+            </div>
+          </div>
+
+           <div class="exp-item">
+            <div class="exp-date">Feb 2026</div>
+            <div class="exp-content">
+              <div class="exp-role">JavaScript Training</div>
+              <div class="exp-company">// IIT BOMBAY · SINE · EDUPYRAMIDS</div>
+              <p class="exp-desc">Completed JavaScript certification at Thakur Ramnarayan College of Arts & Commerce, Dahisar East. Course material by EduPyramids, SINE, IIT Bombay. Passed online exam conducted remotely from IIT Bombay.</p>
+              <div class="exp-chips">
+                <span class="exp-chip">JavaScript</span>
+                <span class="exp-chip">Score: 77.50%</span>
+                <span class="exp-chip">Credits: 2</span>
+                <span class="exp-chip">IIT Bombay</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="exp-item">
+            <div class="exp-date">Sep 2025</div>
+            <div class="exp-content">
+              <div class="exp-role">Python 3.4.3 Training</div>
+              <div class="exp-company">// IIT BOMBAY · SINE · EDUPYRAMIDS</div>
+              <p class="exp-desc">Completed Python certification at Thakur Ramnarayan College of Arts & Commerce, Dahisar East. Course material by EduPyramids, SINE, IIT Bombay. Passed online exam conducted remotely from IIT Bombay.</p>
+              <div class="exp-chips">
+                <span class="exp-chip">Python 3</span>
+                <span class="exp-chip">Score: 80.00%</span>
+                <span class="exp-chip">Credits: 4</span>
+                <span class="exp-chip">IIT Bombay</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact" data-scroll-section>
+      <div class="section-inner">
+        <div class="contact-grid">
+          <div>
+            <div class="section-eyebrow">05 // contact</div>
+            <h2 class="contact-headline">
+              Open a<br><span class="neon">Secure Channel</span>
+            </h2>
+            <p class="contact-sub">Available for high-signal projects, security consulting, and interesting problems. Response time: &lt;24h on encrypted channels.</p>
+            <div class="contact-links">
+              <a href="mailto:lakshinamin@gmail.com" class="contact-link">
+                <span class="contact-link-icon">✉</span>
+                <span class="contact-link-label">Encrypted Mail</span>
+                <span class="contact-link-handle">lakshinamin@gmail.com</span>
+              </a>
+              <a href="https://github.com/Lakshin-amin" class="contact-link" target="_blank" rel="noopener">
+                <span class="contact-link-icon">◈</span>
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-handle">@Lakshin-amin</span>
+              </a>
+              <a href="https://www.linkedin.com/in/lakshin-amin-b41168370/" class="contact-link" target="_blank" rel="noopener">
+                <span class="contact-link-icon">⌗</span>
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-handle">/in/lakshin-amin</span>
+              </a>
+              <a href="#" class="contact-link">
+                <span class="contact-link-icon">📡</span>
+                <span class="contact-link-label">Signal</span>
+                <span class="contact-link-handle">@ghost.01</span>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <div class="status-panel">
+              <div class="status-header">
+                <span>// OPERATOR STATUS</span>
+                <span style="color:var(--neon)">ONLINE</span>
+              </div>
+              <div class="status-body">
+                <div class="status-row"><span class="status-key">Availability</span><span class="status-val green">OPEN</span></div>
+                <!-- FIX: timezone updated to UTC+5:30 (Mumbai) -->
+                <div class="status-row"><span class="status-key">Timezone</span><span class="status-val">UTC+5:30 / IST</span></div>
+                <div class="status-row"><span class="status-key">Response</span><span class="status-val">&lt; 24 hours</span></div>
+                <div class="status-row"><span class="status-key">Mode</span><span class="status-val amber">Contract / Full-time</span></div>
+                <div class="status-row"><span class="status-key">Status</span><span class="status-val">Student Developer</span></div>
+                <div class="avail-badge"><div class="status-dot"></div>Available for new projects</div>
+              </div>
+            </div>
+            <div class="activity-panel">
+              <div class="activity-title">// RECENT ACTIVITY</div>
+              <div class="activity-list">
+                <div><span style="color:var(--neon)">▶</span> Pushed to isro-visualizer</div>
+                <div><span style="color:var(--neon2)">▶</span> Solving DSA on LeetCode</div>
+                <div><span style="color:var(--amber)">▶</span> Building new MERN project</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer data-scroll-section>
+      <div class="footer-copy">© 2025 Lakshin.EXE — ALL RIGHTS RESERVED</div>
+      <div class="footer-sig">POWERED BY <span>// THREE.JS · GSAP · TYPED.JS · LOCOMOTIVE</span></div>
+    </footer>
+
+  </div><!-- end data-scroll-container -->
+
+
+  <!-- ─────────── CDN LIBRARIES ─────────── -->
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Typed.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
+  <!-- Locomotive Scroll JS -->
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+  <!-- Portfolio Script -->
+  <script src="main.js"></script>
+
+</body>
+</html>
