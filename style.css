@@ -1,4 +1,3 @@
-
 /* ── RESET & ROOT ─────────────────────────────────────────────────────────── */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -568,19 +567,92 @@ footer {
 
 /* ── RESPONSIVE ───────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
-  nav { padding: 0 20px; }
-  #hero { padding: 100px 20px 60px; }
-  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  #stats { padding: 20px; }
+
+  /* NAV — shrink to fit, remove // prefix, hide ONLINE status */
+  nav { padding: 0 12px; gap: 8px; }
+  .nav-logo { font-size: 11px; letter-spacing: 1px; }
+  .nav-links { gap: 12px; margin-left: auto; display: flex; }
+  .nav-links a { font-size: 9px; letter-spacing: 1px; }
+  .nav-links a::before { content: ''; }
+  .nav-status { display: none; }
+
+  /* HIDE CURSOR — phones don't have a pointer */
+  #cursor, #cursor-ring { display: none; }
+  body { cursor: auto; }
+
+  /* HERO */
+  #hero { padding: 90px 16px 60px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+
+  /* Stack photo above text, centered */
+  .hero-left { flex-direction: column; align-items: center; gap: 24px; text-align: center; }
+
+  /* Photo sizing */
+  .profile-wrap { width: 150px; height: 150px; }
+  .profile-img-clip { width: 150px; height: 150px; }
+
+  /* Hero text — center on mobile */
+  .hero-tag { justify-content: center; }
+  .hero-tag::before { display: none; }
+
+  /* Hero name — prevent overflow/clip on right */
+  .hero-name {
+    font-size: clamp(32px, 10vw, 56px);
+    letter-spacing: -0.5px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Role text */
+  .hero-role { font-size: 14px; letter-spacing: 2px; }
+
+  /* Description */
+  .hero-desc { font-size: 15px; max-width: 100%; }
+
+  /* Buttons — stack vertically */
+  .hero-btns { flex-direction: column; align-items: center; gap: 10px; }
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+
+  /* Terminal card — full width, proper padding */
+  .terminal-card { width: 100%; margin: 0; }
+  .term-body { padding: 14px 14px; font-size: 11px; overflow-x: auto; }
+
+  /* STATS */
+  #stats { padding: 20px 16px; }
   .stats-inner { grid-template-columns: repeat(2,1fr); }
-  section { padding: 60px 20px; }
+  .stat-block { padding: 16px; }
+  .stat-num { font-size: 28px; }
+
+  /* SECTIONS */
+  section { padding: 60px 16px; }
+
+  /* SKILLS */
   .skills-grid { grid-template-columns: 1fr; }
+
+  /* PROJECTS */
   .projects-grid { grid-template-columns: 1fr; }
   .project-card.featured { grid-column: span 1; }
-  .exp-item { grid-template-columns: 1fr; }
+
+  /* EXPERIENCE */
+  .exp-item { grid-template-columns: 1fr; gap: 4px; }
   .exp-item::before { display: none; }
-  .exp-content { padding-left: 0; padding-top: 8px; }
+  .exp-content { padding-left: 0; padding-top: 6px; }
+  .exp-role { font-size: 17px; }
+
+  /* CONTACT */
   .contact-grid { grid-template-columns: 1fr; }
-  footer { flex-direction: column; gap: 8px; padding: 20px; text-align: center; }
+  .contact-headline { font-size: clamp(28px, 8vw, 44px); }
+
+  /* FOOTER */
+  footer { flex-direction: column; gap: 8px; padding: 20px 16px; text-align: center; }
+  .footer-sig { font-size: 9px; }
 }
 
+/* Extra small phones (< 400px) */
+@media (max-width: 400px) {
+  .hero-name { font-size: 28px; }
+  .hero-role { font-size: 12px; letter-spacing: 1px; }
+  .stat-num { font-size: 24px; }
+  .profile-wrap { width: 120px; height: 120px; }
+  .profile-img-clip { width: 120px; height: 120px; }
+}
